@@ -19,7 +19,7 @@ const NameOfTheService = () => {
   const id =11001
   useEffect(() => {
     axios
-      .get(`http://localhost:3001/api/overview/${id}`)
+      .get(`/api/overview/${id}`)
       .then((response) => {
         setProducts(response.data);
       })
@@ -28,7 +28,7 @@ const NameOfTheService = () => {
       });
 
     axios
-      .get(`http://localhost:3001/api/overview/${id}/styles`)
+      .get(`/api/overview/${id}/styles`)
       .then((response) => {
         setStyles(response.data.results);
         setCurrentStyle(response.data.results[0]);
