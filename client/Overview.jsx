@@ -21,7 +21,6 @@ const NameOfTheService = () => {
     axios
       .get(`http://localhost:3001/api/overview/${id}`)
       .then((response) => {
-        console.log(response.data);
         setProducts(response.data);
       })
       .catch((err) => {
@@ -31,7 +30,6 @@ const NameOfTheService = () => {
     axios
       .get(`http://localhost:3001/api/overview/${id}/styles`)
       .then((response) => {
-        console.log(response);
         setStyles(response.data.results);
         setCurrentStyle(response.data.results[0]);
         setLoading(false);

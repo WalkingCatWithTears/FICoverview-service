@@ -1,5 +1,4 @@
 const Image = ({ style, index, setIndex }) => {
-  console.log(style);
   const { useState, useEffect } = React;
   const [currentImage, setCurrentImage] = useState(style[0]);
   const [expand, setexpand] = useState(false);
@@ -21,7 +20,7 @@ const Image = ({ style, index, setIndex }) => {
       <div className="navigation-expand">
         <div
           id="icon"
-          className="fas fa-expand ml-50 cursor-pointer"
+          className="ml-50 cursor-pointer"
           onClick={() => setexpand(true)}
         >
           <svg
@@ -45,7 +44,7 @@ const Image = ({ style, index, setIndex }) => {
           <div className="slide active  m-auto ">
             <div
               id="icon"
-              className="fas fa-expand cursor-pointer"
+              className="cursor-pointer"
               onClick={() => setexpand(false)}
             >
               <svg
@@ -74,7 +73,7 @@ const Image = ({ style, index, setIndex }) => {
       </div>
       <div className="navigation">
         <div
-          className="fas fa-chevron-left prev-btn"
+          className="prev-btn"
           onClick={() => changeImage(-1)}
         >
           <svg
@@ -93,7 +92,7 @@ const Image = ({ style, index, setIndex }) => {
           </svg>
         </div>
         <div
-          className="fas fa-chevron-right next-btn"
+          className="next-btn"
           onClick={() => changeImage(1)}
         >
           <svg
