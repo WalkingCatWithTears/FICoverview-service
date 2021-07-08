@@ -3,6 +3,7 @@ import "./index.css";
 import Info from "./components/Info.jsx";
 import Image from "./components/Image.jsx";
 import axios from "axios";
+import NavBare from "./components/NavBare.jsx";
 
 const NameOfTheService = () => {
   const { useState, useEffect } = React;
@@ -50,10 +51,13 @@ const NameOfTheService = () => {
   }
 
   return (
+    <>
+    <NavBare />
     <div className="flex w-full px-7">
       {loading ? null : <Image index={index} setIndex={setIndex} style={currentStyle.photos} />}
       <Info quantity={quantity} handleChange={handleChange} name={name} styles={styles} products={products} />
     </div>
+    </>
   );
 };
 

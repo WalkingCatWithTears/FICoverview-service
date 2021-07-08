@@ -16,7 +16,7 @@ const Image = ({ style, index, setIndex }) => {
   };
 
   return (
-    <div className="slider">
+    <div className="slider_slide">
       <div className="navigation-expand">
         <div
           id="icon"
